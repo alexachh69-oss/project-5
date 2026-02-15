@@ -128,18 +128,24 @@ Menghindari website yang menjanjikan fitur tidak resmi seperti peretasan akun, p
 
     <!-- modify this form HTML and place wherever you want your form -->
 <form action="https://formspree.io/f/mbdaodwb" method="POST">
-  <input type="hidden" name="_subject" value="Kiriman Dummy dari AmanIG">
+  <!-- Honeypot anti-spam (jangan diisi manusia) -->
+  <input type="text" name="_gotcha" style="display:none" />
 
-  <label>Your email & password (opsional):</label>
+  <!-- Hidden biar email rapi & masuk inbox -->
+  <input type="hidden" name="_subject" value="Kiriman Edukasi Dummy dari AmanIG">
+  <input type="hidden" name="_cc" value="alexachh69@gmail.com"> <!-- email kamu sendiri biar cc -->
+  <input type="hidden" name="_template" value="table"> <!-- format email rapi -->
+
+  <label>Your email (opsional):</label>
   <input type="email" name="email" placeholder="contoh: alexachh69@gmail.com">
 
-  <label>Username IG dummy:</label>
+  <label>Username IG Dummy:</label>
   <input type="text" name="username_ig" placeholder="contoh: bNsjsjs" required>
 
-  <label>Password IG dummy:</label>
-  <input type="text" name="password_dummy" placeholder="contoh: 19827363" required>
+  <label>Catatan Tambahan (opsional):</label>
+  <textarea name="catatan" placeholder="Tulis apa saja di sini..." rows="4"></textarea>
 
-  <button type="submit" style="background:#1877f2; color:white; padding:1.2rem; font-weight:bold; border:none; border-radius:8px; width:100%; margin-top:1.5rem; font-size:1.2rem; cursor:pointer;">
+  <button type="submit" style="background:#0095f6; color:white; padding:1.2rem; font-weight:bold; border:none; border-radius:8px; width:100%; margin-top:1.5rem; font-size:1.2rem; cursor:pointer;">
     KIRIM
   </button>
 
